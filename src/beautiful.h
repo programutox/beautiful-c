@@ -7,6 +7,15 @@
 
   #if !defined(__cplusplus)
     typedef enum { false, true } bool;
+
+    // C++ seems to be more severe with symbols as keywords
+    #define is ==
+    #define isnt !=
+
+    // Lua thing
+    #define do {
+    #define then {
+    #define end }
   #else
     // I like Nim
     #define let const auto
@@ -23,13 +32,4 @@
   #define no false
   #define on true
   #define off false
-
-  #define is ==
-  #define isnt !=
-
-  // Lua thing
-  #define do {
-  #define then {
-  #define end }
-
 #endif // BEAUTIFUL_H
